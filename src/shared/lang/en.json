@@ -1,0 +1,14 @@
+{
+    "Metadata": {
+        "title": "",
+        "description": ""
+    },
+    "Hero": {
+        "title": "My Name is",
+        "name": "Mr. Danil",
+        "surname": "Borodkin .",
+        "desc": "I am a Software Developer",
+        "button": "Download CV",
+        "keys": ["Senior", "Engineer", "JavaScript", "React", "Node.js"]
+    }
+}

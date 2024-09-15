@@ -1,0 +1,13 @@
+{
+    "Metadata": {
+        "title": "",
+        "description": ""
+    },
+    "Hero": {
+        "title": "Меня зовут",
+        "name": "Данил",
+        "surname": "Бородкин",
+        "desc": "Я Инженер-Разработчик",
+        "button": "Скачать CV"
+    }
+}
