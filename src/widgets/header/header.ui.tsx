@@ -1,10 +1,16 @@
 "use client";
 
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "^/src/shared/ui/dropdown-menu";
 import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
 import { Button, buttonVariants } from "^/src/shared/ui/button";
 import { usePathname } from "next/navigation";
 import { cn } from "^/src/shared/lib/merge";
-import { Link } from "^/src/shared/ui/i18n";
 import {
     Home,
     User2,
@@ -12,7 +18,7 @@ import {
     Layers,
     Briefcase,
     PackagePlus,
-    Phone
+    Phone,
 } from "lucide-react";
 import {
     TooltipProvider,
@@ -20,7 +26,7 @@ import {
     TooltipTrigger,
     TooltipContent,
 } from "^/src/shared/ui/tooltip";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger } from "^/src/shared/ui/dropdown-menu";
+import { Link } from "^/src/shared/ui/i18n";
 
 export const Header = () => {
     const pathname = usePathname();
@@ -39,18 +45,22 @@ export const Header = () => {
         <div className="container fixed top-5 left-0 right-0 flex justify-between items-center">
             <DropdownMenu>
                 <DropdownMenuTrigger>
-                    {pathname.startsWith('/en') ? 'En' : 'Ру'}
+                    {pathname.startsWith("/en") ? "En" : "Ру"}
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuGroup>
                         <DropdownMenuItem>
                             <Button asChild>
-                                <Link href="/ru" replace>Ру</Link>
+                                <Link scroll={false} href="/ru" replace>
+                                    Ру
+                                </Link>
                             </Button>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                             <Button asChild>
-                                <Link href="/en" replace>En</Link>
+                                <Link scroll={false} href="/en" replace>
+                                    En
+                                </Link>
                             </Button>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>
@@ -65,6 +75,7 @@ export const Header = () => {
                         <Tooltip key={itm.link} delayDuration={0.5}>
                             <TooltipTrigger asChild>
                                 <Link
+                                    scroll={false}
                                     className={cn(
                                         buttonVariants({
                                             size: "icon",
@@ -72,7 +83,7 @@ export const Header = () => {
                                         }),
                                         "hover:text-[#2f7df4]",
                                         pathname === itm.link &&
-                                        "text-[#2f7df4] bg-zinc-100"
+                                            "text-[#2f7df4] bg-zinc-100"
                                     )}
                                     href={itm.link}
                                 >
@@ -88,18 +99,22 @@ export const Header = () => {
             </FramerWrapper>
             <DropdownMenu>
                 <DropdownMenuTrigger>
-                    {pathname.startsWith('/en') ? 'En' : 'Ру'}
+                    {pathname.startsWith("/en") ? "En" : "Ру"}
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuGroup>
                         <DropdownMenuItem>
                             <Button asChild>
-                                <Link href="/ru" replace>Ру</Link>
+                                <Link scroll={false} href="/ru" replace>
+                                    Ру
+                                </Link>
                             </Button>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                             <Button asChild>
-                                <Link href="/en" replace>En</Link>
+                                <Link scroll={false} href="/en" replace>
+                                    En
+                                </Link>
                             </Button>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>

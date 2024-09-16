@@ -1,10 +1,17 @@
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "^/src/shared/ui/card";
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardContent,
+    CardFooter,
+} from "^/src/shared/ui/card";
 import { ExternalLink, Link, PackagePlus } from "lucide-react";
 import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
 import { buttonVariants } from "^/src/shared/ui/button";
 import { Heading } from "^/src/shared/ui/heading";
 import { Badge } from "^/src/shared/ui/badge";
 import { cn } from "^/src/shared/lib/merge";
+import { Header } from "^/src/widgets/header";
 
 const items = [
     {
@@ -47,59 +54,60 @@ const items = [
 ];
 
 export const MorePage = () => {
-
     return (
-        <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-            <Badge className="gap-2">
-                <PackagePlus className="h-5 w-5" />
-                More
-            </Badge>
-            <div className="flex flex-col gap-3">
-                <Heading>More</Heading>
-            </div>
-            <div className="h-auto w-full flex flex-wrap gap-3 p-2">
-                {items.map((value, indx) => {
-                    return (
-                        <FramerWrapper
-                            key={indx}
-                            className="max-w-[32%] max-lg:max-w-full"
-                            y={0}
-                            scale={0.8}
-                            delay={indx / 4}
-                            duration={0.15}
-                        >
-                            <Card className="w-full">
-                                <CardHeader>
-                                    <CardTitle>{value.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-base font-poppins">
-                                        {value.description}
-                                    </p>
-                                </CardContent>
-                                <CardFooter>
-                                    <Link
-                                        href={value.link}
-                                        target="blank"
-                                        className={cn(
-                                            buttonVariants({
-                                                variant: "default",
-                                                size: "lg",
-                                            }),
-                                            "w-full gap-3"
-                                        )}
-                                    >
-                                        {" "}
-                                        <ExternalLink />
-                                        Visit here
-                                    </Link>
-                                </CardFooter>
-                            </Card>
-                        </FramerWrapper>
-                    );
-                })}
-            </div>
-        </div>
-    );
+        <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
+            <Header />
 
-}
+            <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+                <Badge className="gap-2">
+                    <PackagePlus className="h-5 w-5" />
+                    More
+                </Badge>
+                <div className="flex flex-col gap-3">
+                    <Heading>More</Heading>
+                </div>
+                <div className="h-auto w-full flex flex-wrap gap-3 p-2">
+                    {items.map((value, indx) => {
+                        return (
+                            <FramerWrapper
+                                key={indx}
+                                className="max-w-[32%] max-lg:max-w-full"
+                                y={0}
+                                scale={0.8}
+                                delay={indx / 4}
+                                duration={0.15}
+                            >
+                                <Card className="w-full">
+                                    <CardHeader>
+                                        <CardTitle>{value.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-base font-poppins">
+                                            {value.description}
+                                        </p>
+                                    </CardContent>
+                                    <CardFooter>
+                                        <Link
+                                            href={value.link}
+                                            target="blank"
+                                            className={cn(
+                                                buttonVariants({
+                                                    variant: "default",
+                                                    size: "lg",
+                                                }),
+                                                "w-full gap-3"
+                                            )}
+                                        >
+                                            <ExternalLink />
+                                            Visit here
+                                        </Link>
+                                    </CardFooter>
+                                </Card>
+                            </FramerWrapper>
+                        );
+                    })}
+                </div>
+            </div>
+        </main>
+    );
+};

@@ -1,6 +1,7 @@
 import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
 import { ProjectCard } from "^/src/shared/ui/project-card";
 import { Heading } from "^/src/shared/ui/heading";
+import { Header } from "^/src/widgets/header";
 import { Badge } from "^/src/shared/ui/badge";
 import { Layers } from "lucide-react";
 
@@ -65,30 +66,34 @@ const Projects = [
 
 export const ProjectsPage = () => {
     return (
-        <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-            <Badge className="gap-2">
-                <Layers className="h-5 w-5" />
-                Projects
-            </Badge>
-            <div className="flex flex-col gap-3">
-                <Heading>My Projects</Heading>
-                <FramerWrapper y={0} x={200}>
-                    <p className=" font-poppins text-lg w-full text-primary max-sm:text-base">
-                        I love to Build Cool Projects. Here, you&#x27;ll find a
-                        curated collection of my creative endeavors and
-                        technical projects. Each piece represents a journey of
-                        innovation, problem-solving, and continuous learning.
-                        Feel free to explore this showcase of my passion and
-                        expertise in action.
-                    </p>
-                </FramerWrapper>
-            </div>
+        <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
+            <Header />
 
-            <div className=" w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
-                {Projects.map((val, indx) => {
-                    return <ProjectCard key={indx} value={val} num={indx} />;
-                })}
+            <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+                <Badge className="gap-2">
+                    <Layers className="h-5 w-5" />
+                    Projects
+                </Badge>
+                <div className="flex flex-col gap-3">
+                    <Heading>My Projects</Heading>
+                    <FramerWrapper y={0} x={200}>
+                        <p className=" font-poppins text-lg w-full text-primary max-sm:text-base">
+                            I love to Build Cool Projects. Here, you&#x27;ll find a
+                            curated collection of my creative endeavors and
+                            technical projects. Each piece represents a journey of
+                            innovation, problem-solving, and continuous learning.
+                            Feel free to explore this showcase of my passion and
+                            expertise in action.
+                        </p>
+                    </FramerWrapper>
+                </div>
+
+                <div className=" w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
+                    {Projects.map((val, indx) => {
+                        return <ProjectCard key={indx} value={val} num={indx} />;
+                    })}
+                </div>
             </div>
-        </div>
+        </main>
     );
 }

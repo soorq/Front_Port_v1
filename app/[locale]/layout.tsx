@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server";
 import { Poppins, Rubik } from "next/font/google";
 import { cn } from "^/src/shared/lib/merge";
 import type { Metadata } from "next";
+import { Transition } from "^/src/widgets/page-transition";
+import { Suspense } from "react";
 
 const _poppins = Poppins({
     subsets: ["latin"],
@@ -93,9 +95,16 @@ export default function RootLayout({
             lang={locale}
             suppressHydrationWarning
         >
-            <body className={cn("bg-transparent bg-[radial-gradient(#2f7df4_1px,transparent_1px)] [background-size:16px_16px]", { "bg-white": "#E6E7EB" })}>
+            <body
+                className={cn(
+                    "bg-transparent bg-[radial-gradient(#2f7df4_1px,transparent_1px)] [background-size:16px_16px]",
+                    { "bg-white": "#E6E7EB" }
+                )}
+            >
                 <NextIntlClientProvider messages={messages}>
-                    {children}
+                    <Transition>
+                        <Suspense fallback>{children}</Suspense>
+                    </Transition>
                     <GithubBtn />
                 </NextIntlClientProvider>
             </body>
