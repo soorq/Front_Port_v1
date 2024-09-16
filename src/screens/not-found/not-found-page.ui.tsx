@@ -9,7 +9,7 @@ import {
     Text,
     useGLTF,
 } from "@react-three/drei";
-import { cache } from "react";
+import { cache, Suspense } from "react";
 
 export const NotFoundPage = cache(() => {
     return (
@@ -18,6 +18,7 @@ export const NotFoundPage = cache(() => {
             className="!fixed !inset-0 !w-full !h-svh"
             key="404-page-canvas"
             orthographic
+            fallback
         >
             <Model />
             <directionalLight intensity={3} position={[0, 0.1, 1]} />
@@ -32,9 +33,11 @@ export default function Model() {
 
     return (
         <group scale={viewport.width / 1.5}>
-            {nodes.Scene.children.map((mesh, i) => {
-                return <Mesh data={mesh} key={i} />;
-            })}
+            <Suspense fallback={null}>
+                {nodes.Scene.children.map((mesh, i) => {
+                    return <Mesh data={mesh} key={i} />;
+                })}
+            </Suspense>
             <group>
                 <Text
                     color="white"
@@ -59,7 +62,6 @@ export default function Model() {
     );
 }
 
-
 const Mesh = ({ data }: { data: Object3D<Object3DEventMap> }) => {
     return (
         <Float>
@@ -76,4 +78,6 @@ const Mesh = ({ data }: { data: Object3D<Object3DEventMap> }) => {
             </mesh>
         </Float>
     );
-}
+};
+
+useGLTF.preload('/scene/model.glb')

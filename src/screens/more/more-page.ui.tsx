@@ -5,13 +5,15 @@ import {
     CardContent,
     CardFooter,
 } from "^/src/shared/ui/card";
-import { ExternalLink, Link, PackagePlus } from "lucide-react";
+import { ExternalLink, PackagePlus } from "lucide-react";
 import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
 import { buttonVariants } from "^/src/shared/ui/button";
 import { Heading } from "^/src/shared/ui/heading";
 import { Badge } from "^/src/shared/ui/badge";
 import { cn } from "^/src/shared/lib/merge";
 import { Header } from "^/src/widgets/header";
+import { Link } from "^/src/shared/ui/i18n";
+import { useTranslations } from "next-intl";
 
 const items = [
     {
@@ -54,6 +56,7 @@ const items = [
 ];
 
 export const MorePage = () => {
+    const t = useTranslations("More")
     return (
         <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
             <Header />
@@ -61,10 +64,10 @@ export const MorePage = () => {
             <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
                 <Badge className="gap-2">
                     <PackagePlus className="h-5 w-5" />
-                    More
+                    {t("badge")}
                 </Badge>
                 <div className="flex flex-col gap-3">
-                    <Heading>More</Heading>
+                    <Heading>{t("title")}</Heading>
                 </div>
                 <div className="h-auto w-full flex flex-wrap gap-3 p-2">
                     {items.map((value, indx) => {

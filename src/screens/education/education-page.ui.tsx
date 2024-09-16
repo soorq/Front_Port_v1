@@ -1,10 +1,12 @@
 import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
 import { Heading } from "^/src/shared/ui/heading";
 import { Badge } from "^/src/shared/ui/badge";
-import { Briefcase } from "lucide-react";
 import { Header } from "^/src/widgets/header";
+import { Briefcase } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export const EducationPage = () => {
+    const t = useTranslations("Education");
     return (
         <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
             <Header />
@@ -12,10 +14,10 @@ export const EducationPage = () => {
             <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
                 <Badge className=" gap-2">
                     <Briefcase className="h-5 w-5" />
-                    Education
+                    {t("badge")}
                 </Badge>
                 <div className="flex flex-col gap-3">
-                    <Heading>My Education</Heading>
+                    <Heading>{t("title")}</Heading>
                 </div>
                 <div className="w-full h-fit flex flex-col">
                     <div className="w-full h-fit flex">
@@ -31,13 +33,13 @@ export const EducationPage = () => {
                             y={0}
                             x={100}
                             delay={0.35}
-                            className="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point "
+                            className="relative w-3/4 border-l-4 border-l-input p-4 gap-3 point"
                         >
                             <div className="text-2xl font-rubik max-sm:text-xl">
                                 Bachelor of Computer Application, <br /> Ranchi
                                 University Jharkhand
                             </div>
-                            <p className=" font-poppins text-base w-full text-primary  max-sm:text-xs">
+                            <p className="font-poppins text-base w-full max-sm:text-xs">
                                 I am currently Studying Bachelor of Computer
                                 Application form Doranda College Ranchi a
                                 Goverment College of Ranchi. The program has

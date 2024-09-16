@@ -10,5 +10,58 @@
         "desc": "I am a Software Developer",
         "button": "Download CV",
         "keys": ["Senior", "Engineer", "JavaScript", "React", "Node.js"]
+    },
+    "About": {
+        "badge": "About me",
+        "title": {
+            "after": "Software Engineer And Web",
+            "before": "Developer, Based In Russia."
+        },
+        "desc": "I am a Full Stack Web Developer from Ramgarh cantt, Jharkhand, India. I love crafting cool web projects and also open-source contribuitions. My biggest achievement lies in my mastery of JavaScript and CSS, ensuring pixel-perfect designs that captivate users. With a keen eye for detail and a commitment to delivery speed, I excel at creating seamless and responsive interfaces that leave a lasting impression."
+    },
+    "Skills": {
+        "badge": "My Skills",
+        "title": {
+            "after": "My Technical Experience",
+            "before": "Skills."
+        },
+        "desc": "Currently i am a fresher and i have a solid understand of HTML5, CSS3, JS, TS and React, including responsive design principles. I specialize in building web applications and sites using Javascript, Typescript, React, Nextjs & Node.",
+        "other": {
+            "code": "Programming Languages",
+            "framework": "Framework/Libraries and Version Control"
+        }
+    },
+    "Projects": {
+        "badge": "Projects",
+        "title": "My Projects",
+        "desc": "I love to Build Cool Projects. Here, you&#x27;ll find a curated collection of my creative endeavors and technical projects. Each piece represents a journey of innovation, problem-solving, and continuous learning. Feel free to explore this showcase of my passion and expertise in action."
+    },
+    "Education": {
+        "badge": "Education",
+        "title": "My Education",
+        "desc": ""
+    },
+    "More": {
+        "badge": "More",
+        "title": "More",
+        "desc": ""
+    },
+    "Contact": {
+        "badge": "Contact",
+        "title": "Contact me!"
+    },
+    "Cookie": {
+        "title": "We use cookies!",
+        "desc": {
+            "part": "Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent.",
+            "link": "Let me choose"
+        },
+        "notice": "Closing this modal default settings will be saved.",
+        "buttons": {
+            "accept": "Accept all",
+            "decline": "Decline all",
+            "reject": "Reject all",
+            "prefer": "Preferences"
+        }
     }
 }

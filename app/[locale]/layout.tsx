@@ -1,23 +1,25 @@
-import { NextIntlClientProvider, useMessages } from "next-intl";
 import { GithubBtn } from "^/src/shared/ui/github-btn";
+import { RootProvider } from "^/src/app/providers";
 import { getTranslations } from "next-intl/server";
 import { Poppins, Rubik } from "next/font/google";
-import { cn } from "^/src/shared/lib/merge";
 import type { Metadata } from "next";
-import { Transition } from "^/src/widgets/page-transition";
 import { Suspense } from "react";
+import { CookieNotification } from "^/src/features/cookie-contist";
+import { SideLines } from "^/src/widgets/test";
 
 const _poppins = Poppins({
-    subsets: ["latin"],
-    weight: "400",
+    subsets: ["latin", "latin-ext"],
+    weight: ["300", "400", "500", "600"],
     variable: "--font-poppins",
+    display: 'swap',
     adjustFontFallback: false,
     preload: true,
 });
 
 const _rubik = Rubik({
     subsets: ["latin", "latin-ext", "cyrillic"],
-    weight: "600",
+    weight: ["300", "400", "500", "600"],
+    display: 'swap',
     variable: "--font-rubik",
     adjustFontFallback: false,
     preload: true,
@@ -87,26 +89,20 @@ export default function RootLayout({
     children,
     params: { locale },
 }: Readonly<React.PropsWithChildren<{ params: { locale: string } }>>) {
-    const messages = useMessages();
-
     return (
         <html
-            className={`${_rubik.variable} scroll-smooth subpixel-antialiased ${_poppins.variable}`}
+            className={`${_rubik.className} scroll-smooth subpixel-antialiased ${_poppins.className}`}
             lang={locale}
             suppressHydrationWarning
         >
-            <body
-                className={cn(
-                    "bg-transparent bg-[radial-gradient(#2f7df4_1px,transparent_1px)] [background-size:16px_16px]",
-                    { "bg-white": "#E6E7EB" }
-                )}
-            >
-                <NextIntlClientProvider messages={messages}>
-                    <Transition>
-                        <Suspense fallback>{children}</Suspense>
-                    </Transition>
+            <body>
+                <RootProvider>
+                    <Suspense fallback>{children}</Suspense>
                     <GithubBtn />
-                </NextIntlClientProvider>
+                    <CookieNotification />
+                    <SideLines />
+
+                </RootProvider>
             </body>
         </html>
     );

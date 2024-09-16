@@ -16,7 +16,7 @@ export const ProjectCard: React.FC<{
 }> = ({ value, num }) => {
   return (
     <FramerWrapper
-      className={"max-w-[32%] min-h-[345px] max-lg:max-w-full"}
+      className={"h-full w-full"}
       y={0}
       scale={0.8}
       delay={num / 4}

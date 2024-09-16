@@ -4,8 +4,10 @@ import { Heading } from "^/src/shared/ui/heading";
 import { Header } from "^/src/widgets/header";
 import { Badge } from "^/src/shared/ui/badge";
 import { Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export const ContactPage = () => {
+    const t = useTranslations("Contact");
     return (
         <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
             <Header />
@@ -13,10 +15,10 @@ export const ContactPage = () => {
             <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
                 <Badge className="gap-2">
                     <Phone className="h-5 w-5" />
-                    Contact
+                    {t("badge")}
                 </Badge>
                 <div className="flex flex-col gap-3 w-full">
-                    <Heading>Contact Me!</Heading>
+                    <Heading>{t("title")}</Heading>
                     <div className="h-auto w-full flex justify-center items-center">
                         <FramerWrapper y={0} scale={0.8}>
                             <ContactForm />
