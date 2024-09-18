@@ -7,16 +7,16 @@ import Image from "next/image";
 
 export const RootPage = () => {
     return (
-        <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
+        <main className="flex max-h-dvh overflow-hidden container h-dvh items-center justify-between">
             <Header />
 
             <FramerWrapper
-                className=" h-full w-auto flex flex-col justify-start gap-4"
+                className="h-auto w-full flex flex-col items-start gap-4"
                 y={0}
                 x={-100}
             >
                 <HeroTypography />
-                <div className="h-fit w-full flex gap-3 my-2">
+                <div className="h-fit w-full flex gap-2.5 mb-2.5">
                     <SocialLinks />
                 </div>
                 <DownloadResumeBtn />

@@ -32,10 +32,10 @@ const Projects = [
 export const ProjectsPage = () => {
     const t = useTranslations("Projects");
     return (
-        <main className="flex break-words max-h-dvh h-dvh container pt-14 pb-4 max-md:p-4 max-sm:pt-20">
+        <main className="max-h-dvh h-dvh overflow-hidden container">
             <Header />
 
-            <div className="h-auto w-full mt-20 flex flex-col items-start gap-5">
+            <div className="h-auto w-full mt-28 flex flex-col items-start gap-5">
                 <Badge className="gap-2">
                     <Layers className="h-5 w-5" />
                     {t("badge")}

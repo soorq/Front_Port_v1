@@ -1,11 +1,10 @@
+import { CookieNotification } from "^/src/features/cookie-contist";
 import { GithubBtn } from "^/src/shared/ui/github-btn";
 import { RootProvider } from "^/src/app/providers";
 import { getTranslations } from "next-intl/server";
 import { Poppins, Rubik } from "next/font/google";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { CookieNotification } from "^/src/features/cookie-contist";
-import { SideLines } from "^/src/widgets/test";
 
 const _poppins = Poppins({
     subsets: ["latin", "latin-ext"],
@@ -100,8 +99,6 @@ export default function RootLayout({
                     <Suspense fallback>{children}</Suspense>
                     <GithubBtn />
                     <CookieNotification />
-                    <SideLines />
-
                 </RootProvider>
             </body>
         </html>

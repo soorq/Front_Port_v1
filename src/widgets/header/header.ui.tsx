@@ -1,35 +1,32 @@
 "use client";
 
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "^/src/shared/ui/dropdown-menu";
-import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
 import { Button, buttonVariants } from "^/src/shared/ui/button";
+import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
+import { ThemeSwitcher } from "^/src/shared/ui/theme-swicther";
+import { usePathname } from "next/navigation";
+import { Link } from "^/src/shared/ui/i18n";
 import { cn } from "^/src/shared/lib/merge";
 import {
-    Home,
-    User2,
-    Lightbulb,
-    Layers,
-    Briefcase,
     PackagePlus,
+    Lightbulb,
+    Briefcase,
+    Layers,
     Phone,
+    User2,
+    Home,
 } from "lucide-react";
 import {
     TooltipProvider,
-    Tooltip,
     TooltipTrigger,
     TooltipContent,
+    Tooltip,
 } from "^/src/shared/ui/tooltip";
-import { Link, usePathname } from "^/src/shared/ui/i18n";
-import { ThemeSwitcher } from "^/src/shared/ui/theme-swicther";
+import Image from "next/image";
 
 export const Header = () => {
     const pathname = usePathname();
+
+    const lang = pathname.startsWith("/en") ? "ru" : "en";
 
     const items = [
         { name: "Home", icon: <Home />, link: "/" },
@@ -43,29 +40,34 @@ export const Header = () => {
 
     return (
         <div className="container fixed top-5 left-0 right-0 flex justify-between items-center">
-            <DropdownMenu>
-                <DropdownMenuTrigger>
-                    {pathname.startsWith("/en") ? "En" : "Ру"}
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                    <DropdownMenuGroup>
-                        <DropdownMenuItem>
-                            <Button asChild>
-                                <Link scroll={false} href="/ru" replace>
-                                    Ру
-                                </Link>
-                            </Button>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Button asChild>
-                                <Link scroll={false} href="/en" replace>
-                                    En
-                                </Link>
-                            </Button>
-                        </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                </DropdownMenuContent>
-            </DropdownMenu>
+            <Button
+                asChild
+                variant="ghost"
+                className="p-2 overflow-hidden"
+                size="icon"
+            >
+                <Link scroll={false} href={lang}>
+                    {pathname.startsWith("/en") ? (
+                        <Image
+                            src="https://flagcdn.com/w40/ru.png"
+                            className="aspect-square rounded-full object-cover object-center"
+                            sizes="100%"
+                            height={40}
+                            width={40}
+                            alt=""
+                        />
+                    ) : (
+                        <Image
+                            src="https://flagcdn.com/w40/us.png"
+                            className="aspect-square rounded-full object-cover object-center"
+                            sizes="100%"
+                            height={40}
+                            width={40}
+                            alt=""
+                        />
+                    )}
+                </Link>
+            </Button>
             <FramerWrapper
                 className="bg-background/50 h-fit px-2.5 py-1.5 border border-border rounded-lg flex-row gap-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 sm:gap-1 flex"
                 y={-100}

@@ -48,7 +48,7 @@ export const AboutPage = () => {
                 </FramerWrapper>
                 <FramerWrapper className="block" y={100} delay={0.31}>
                     <h1 className="gap-2 text-3xl font-poppins font-semibold flex c_underline relative max-sm:text-2xl">
-                        <Heart className="h-8 w-8" /> Hobbies
+                        <Heart className="h-8 w-8 text-primary" /> Hobbies
                     </h1>
                     <div className="w-full h-fit p-2 flex flex-row justify-between gap-7 max-lg:flex-col">
                         {items.map((val, i) => {

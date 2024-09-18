@@ -2,8 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { twMerge } from "tailwind-merge";
 import { ArrowRight, Github, MapPin, Ticket, Twitter, Youtube } from "lucide-react";
+import { cn } from "^/src/shared/lib/merge";
 
 export const ProjectCards = ({ children }: React.PropsWithChildren) => {
     return (
@@ -43,7 +43,7 @@ const Block = ({ className, ...rest }) => (
             stiffness: 400,
             damping: 50,
         }}
-        className={twMerge(
+        className={cn(
             "col-span-4 rounded-lg border border-border bg-background p-6",
             className
         )}

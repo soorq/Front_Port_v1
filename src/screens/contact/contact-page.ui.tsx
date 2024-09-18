@@ -9,10 +9,10 @@ import { useTranslations } from "next-intl";
 export const ContactPage = () => {
     const t = useTranslations("Contact");
     return (
-        <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
+        <main className="max-h-dvh h-dvh overflow-hidden container">
             <Header />
 
-            <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+            <div className="h-auto mt-28 w-full relative flex flex-col items-start gap-5">
                 <Badge className="gap-2">
                     <Phone className="h-5 w-5" />
                     {t("badge")}

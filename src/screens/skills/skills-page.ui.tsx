@@ -1,39 +1,66 @@
 import { FramerWrapper } from "^/src/shared/ui/framer-wrapper";
-import { SkillsFooter } from "^/src/widgets/skills";
+import { SkillsBlock } from "^/src/widgets/skills";
 import { Heading } from "^/src/shared/ui/heading";
-import { Badge } from "^/src/shared/ui/badge";
-import { Lightbulb } from "lucide-react";
+import { TimeLine } from "^/src/widgets/timeline";
 import { Header } from "^/src/widgets/header";
+import { Badge } from "^/src/shared/ui/badge";
 import { useTranslations } from "next-intl";
+import { Lightbulb } from "lucide-react";
 
-const language = [
-    { alt: "html", img: "/css.png" },
-    { alt: "css", img: "/css.png" },
-    { alt: "js", img: "/css.png" },
-    { alt: "ts", img: "/css.png" },
-    { alt: "cplus", img: "/css.png" },
-];
-const framework = [
-    { alt: "react", img: "/css.png" },
-    { alt: "nextjs", img: "/css.png" },
-    { alt: "scss", img: "/css.png" },
-    { alt: "tailwind", img: "/css.png" },
-    { alt: "github", img: "/css.png" },
-    { alt: "vscode", img: "/css.png" },
+import skills from "^/src/shared/constants/skills.json";
+
+const data = [
+    {
+        date: "jull 21-21",
+        title: "Lorem ipsum dolor sit",
+        description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dolor, quibusdam! Dolor, perspiciatis recusandae. maxime recusandae veniam, dolorum alias!",
+    },
+    {
+        date: "jull 21-21",
+        title: "Lorem ipsum dolor sit",
+        description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dolor, quibusdam! Dolor, perspiciatis recusandae. maxime recusandae veniam, dolorum alias!",
+    },
+    {
+        date: "jull 21-21",
+        title: "Lorem ipsum dolor sit",
+        description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dolor, quibusdam! Dolor, perspiciatis recusandae. maxime recusandae veniam, dolorum alias!",
+    },
+    {
+        date: "jull 21-21",
+        title: "Lorem ipsum dolor sit",
+        description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dolor, quibusdam! Dolor, perspiciatis recusandae. maxime recusandae veniam, dolorum alias!",
+    },
+    {
+        date: "jull 21-21",
+        title: "Lorem ipsum dolor sit",
+        description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dolor, quibusdam! Dolor, perspiciatis recusandae. maxime recusandae veniam, dolorum alias!",
+    },
+    {
+        date: "jull 21-21",
+        title: "Lorem ipsum dolor sit",
+        description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dolor, quibusdam! Dolor, perspiciatis recusandae. maxime recusandae veniam, dolorum alias!",
+    },
 ];
 
 export const SkillsPage = () => {
     const t = useTranslations("Skills");
 
     return (
-        <main className="flex relative break-words min-h-screen container items-center justify-between pt-14 pb-4 max-md:p-4 max-sm:pt-20">
+        <main className="max-h-dvh h-dvh overflow-hidden container">
             <Header />
 
-            <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-                <Badge className=" gap-2">
+            <div className="h-auto mt-28 w-full flex flex-col items-start gap-5 overflow-hidden">
+                <Badge>
                     <Lightbulb className="h-5 w-5" />
                     {t("badge")}
                 </Badge>
+
                 <div className="flex flex-col gap-3">
                     <Heading>
                         {t("title.after")} <br />{" "}
@@ -41,27 +68,28 @@ export const SkillsPage = () => {
                             {t("title.before")}
                         </span>
                     </Heading>
-                    <FramerWrapper y={0} x={200}>
-                        <p className="font-poppins text-xl w-full max-sm:text-lg">
-                            {t("desc")}
-                        </p>
-                    </FramerWrapper>
-                    <FramerWrapper y={100} delay={0.3} className="block">
-                        <h1 className="gap-2 text-2xl font-poppins font-semibold flex relative max-sm:text-xl">
-                            {t("other.code")}
-                        </h1>
-                        <div className="w-full h-fit flex-row flex justify-between items-center">
-                            <SkillsFooter items={language} />
+                    <div className="flex w-full h-full max-h-[65dvh] overflow-y-auto scroll-none scroll-m-0 will-change-scroll">
+                        <FramerWrapper
+                            className="w-2/3"
+                            x={200}
+                            y={0}
+                        >
+                            <p className="font-poppins text-xl w-full max-sm:text-lg mb-10">
+                                {t("desc")}
+                            </p>
+
+                            <TimeLine data={data} />
+                        </FramerWrapper>
+
+                        <div className="w-1/4 h-full space-y-5 font-poppins">
+                            <SkillsBlock item={skills[0].languages} />
+                            <SkillsBlock item={skills[0].cascading} />
+                            <SkillsBlock item={skills[0].framework} />
+                            <SkillsBlock item={skills[0].bundlers} />
+                            <SkillsBlock item={skills[0].testing} />
+                            <SkillsBlock item={skills[0].other} />
                         </div>
-                    </FramerWrapper>
-                    <FramerWrapper className="block" y={100} delay={0.32}>
-                        <h1 className="gap-2 text-2xl font-poppins font-semibold flex relative max-sm:text-xl">
-                            {t("other.framework")}
-                        </h1>
-                        <div className="w-full h-fit flex-row flex justify-between items-center">
-                            <SkillsFooter items={framework} />
-                        </div>
-                    </FramerWrapper>
+                    </div>
                 </div>
             </div>
         </main>

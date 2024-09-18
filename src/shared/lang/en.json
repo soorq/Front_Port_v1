@@ -27,8 +27,8 @@
         },
         "desc": "Currently i am a fresher and i have a solid understand of HTML5, CSS3, JS, TS and React, including responsive design principles. I specialize in building web applications and sites using Javascript, Typescript, React, Nextjs & Node.",
         "other": {
-            "code": "Programming Languages",
-            "framework": "Framework/Libraries and Version Control"
+            "code": "Languages",
+            "framework": "Framework"
         }
     },
     "Projects": {
@@ -49,6 +49,15 @@
     "Contact": {
         "badge": "Contact",
         "title": "Contact me!"
+    },
+    "Theme": {
+        "sr": "Toggle theme",
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+    },
+    "Other" : {
+        "notFound": "Not found"
     },
     "Cookie": {
         "title": "We use cookies!",

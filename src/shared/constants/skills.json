@@ -1,0 +1,184 @@
+[
+    {
+        "languages": {
+            "paragraph": "Языки",
+            "data": [
+                {
+                    "src": "https://img.icons8.com/?size=100&id=B1VZ9ZRl8Vwt&format=png&color=000000",
+                    "alt": "Rust",
+                    "label": "Rust",
+                    "desc": "1+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000",
+                    "alt": "JavaScript. JavaScript Logo. javascript. js",
+                    "label": "JavaScript",
+                    "desc": "6+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=wpZmKzk11AzJ&format=png&color=000000",
+                    "alt": "TypeScript. TypeScript Logo. typescript. ts",
+                    "label": "TypeScript",
+                    "desc": "3+ years"
+                }
+            ]
+        },
+
+        "cascading": {
+            "paragraph": "Каскадные языки",
+            "data": [
+                {
+                    "src": "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
+                    "alt": "HTML Logo. HTML. html",
+                    "label": "HTML",
+                    "desc": "6+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=21278&format=png&color=000000",
+                    "alt": "CSS Logo. CSS. css",
+                    "label": "HTML",
+                    "desc": "6+ years"
+                }
+            ]
+        },
+        "framework": {
+            "paragraph": "Фреймворки",
+            "data": [
+                {
+                    "src": "https://img.icons8.com/?size=256&id=t4YbEbA834uH&format=png&color=1A6DFF,C822FF",
+                    "alt": "React Logo",
+                    "label": "HTML",
+                    "desc": "4+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=256&id=yUdJlcKanVbh&format=png",
+                    "alt": "NextJs Logo",
+                    "label": "NextJs",
+                    "desc": "3+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=256&id=9ESZMOeUioJS&format=png",
+                    "alt": "NestJs Logo",
+                    "label": "HTML",
+                    "desc": "2.5+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=256&id=SDVmtZ6VBGXt&format=png",
+                    "alt": "Express Logo",
+                    "label": "Express",
+                    "desc": "3+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=256&id=jD-fJzVguBmw&format=png",
+                    "alt": "Redux Logo",
+                    "label": "Redux",
+                    "desc": "2+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000",
+                    "alt": "TailwindCss Logo",
+                    "label": "TailwindCss",
+                    "desc": "3+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=QBqFNfPPB2Kx&format=png&color=000000",
+                    "alt": "SASS Logo",
+                    "label": "SASS/SCSS",
+                    "desc": "4+ years"
+                }
+            ]
+        },
+        "bundlers": {
+            "paragraph": "Бандлеры",
+            "data": [
+                {
+                    "alt": "Webpack",
+                    "src": "https://img.icons8.com/?size=100&id=sOWbK4N3cxGh&format=png&color=000000",
+                    "label": "WebPack",
+                    "desc": "4+ years"
+                },
+                {
+                    "alt": "Vite",
+                    "src": "https://img.icons8.com/?size=100&id=dJjTWMogzFzg&format=png&color=000000",
+                    "label": "Vite",
+                    "desc": "3+ years"
+                },
+                {
+                    "alt": "Rollup",
+                    "src": "https://img.icons8.com/?size=100&id=htcDPUOjDkUX&format=png&color=000000",
+                    "label": "Rollup",
+                    "desc": "1+ years"
+                }
+            ]
+        },
+        "testing": {
+            "paragraph": "Тестирование",
+            "data": [
+                {
+                    "alt": "JEST Logo. JEST. jest",
+                    "src": "https://img.icons8.com/?size=100&id=bp24DwGXJDyT&format=png&color=000000",
+                    "label": "JEST",
+                    "desc": "2+ years"
+                }
+            ]
+        },
+        "databases": {
+            "paragraph": "Базы данных",
+            "data": [
+                {
+                    "src": "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
+                    "alt": "PostgreSQL Logo",
+                    "label": "PostgreSQL",
+                    "desc": "3+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=rgPSE6nAB766&format=png&color=000000",
+                    "alt": "MySQL Logo",
+                    "label": "MySQL",
+                    "desc": "3+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000",
+                    "alt": "Mongo Logo",
+                    "label": "MongoDb",
+                    "desc": "2+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=VMRAbKfEzssG&format=png&color=000000",
+                    "alt": "Sqlite Logo",
+                    "label": "Sqlite",
+                    "desc": "1+ years"
+                }
+            ]
+        },
+        "other": {
+            "paragraph": "Остальное",
+            "data": [
+                {
+                    "src": "https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000",
+                    "alt": "Docker Logo. DOCKER. docker",
+                    "label": "Docker",
+                    "desc": "2+ years"
+                },
+                {
+                    "src": "https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000",
+                    "alt": "Github Logo. GITHUB. github",
+                    "label": "Github",
+                    "desc": "4+ years"
+                },
+                {
+                    "alt": "graphql",
+                    "src": "https://img.icons8.com/?size=100&id=zdI5E8moxhs-&format=png&color=000000",
+                    "label": "GraphQl",
+                    "desc": "1+ years"
+                },
+                {
+                    "alt": "Nginx Logo. Nginx. nginx",
+                    "src": "https://img.icons8.com/?size=100&id=t2x6DtCn5Zzx&format=png&color=000000",
+                    "label": "Nginx",
+                    "desc": "2+ years"
+                }
+            ]
+        }
+    }
+]

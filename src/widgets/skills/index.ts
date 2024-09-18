@@ -1,1 +1,1 @@
-export * from "./skills-footer.ui";
+export * from "./skills-block.ui";
