@@ -1,7 +1,17 @@
 {
     "Metadata": {
-        "title": "",
-        "description": ""
+        "title": "Я разработчик ПО",
+        "description": "",
+        "og": {
+            "title": "",
+            "description": ""
+        },
+        "about": { "title": "Обо мне", "description": "" },
+        "education": { "title": "Образовае", "description": "" },
+        "skills": { "title": "Умения", "description": "" },
+        "projects": { "title": "Проекты", "description": "" },
+        "more": { "title": "Больше информации", "description": "" },
+        "contact": { "title": "Контактная информация", "description": "" }
     },
     "Hero": {
         "title": "Меня зовут",
