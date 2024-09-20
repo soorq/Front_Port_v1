@@ -26,7 +26,7 @@ import Image from "next/image";
 export const Header = () => {
     const pathname = usePathname();
 
-    const lang = pathname.startsWith("/en") ? "ru" : "en";
+    const lang = pathname.startsWith("/en") ? "/ru" : "/en";
 
     const items = [
         { name: "Home", icon: <Home />, link: "/" },
@@ -46,7 +46,7 @@ export const Header = () => {
                 className="p-2 overflow-hidden"
                 size="icon"
             >
-                <Link scroll={false} href={lang}>
+                <Link scroll={false} href={lang} replace hrefLang={lang}>
                     {pathname.startsWith("/en") ? (
                         <Image
                             src="https://flagcdn.com/w40/ru.png"
