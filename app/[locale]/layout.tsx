@@ -3,9 +3,9 @@ import { GithubBtn } from "^/src/shared/ui/github-btn";
 import { RootProvider } from "^/src/app/providers";
 import { getTranslations } from "next-intl/server";
 import { Poppins, Rubik } from "next/font/google";
+import { routing } from "^/src/shared/ui/i18n";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { routing } from "^/src/shared/ui/i18n";
 
 const _poppins = Poppins({
     subsets: ["latin", "latin-ext"],

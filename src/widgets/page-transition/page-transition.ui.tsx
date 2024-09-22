@@ -1,7 +1,6 @@
 "use client";
 
 import { TransitionRouter } from "next-transition-router";
-import { Header } from "^/src/widgets/header";
 import { animate } from "framer-motion";
 import React from "react";
 
@@ -14,14 +13,14 @@ export const Transition = ({ children }: React.PropsWithChildren) => {
             first_layer.current,
             { y: 0 },
             {
-                duration: 0.5,
+                duration: 0.45,
                 ease: "circInOut",
                 onComplete: () => {
                     animate(
                         second_layer.current,
                         { y: 0 },
                         {
-                            duration: 0.5,
+                            duration: 0.4,
                             ease: "circInOut",
                             onComplete: next,
                         }
@@ -40,14 +39,14 @@ export const Transition = ({ children }: React.PropsWithChildren) => {
             second_layer.current,
             { y: "-100%" },
             {
-                duration: 0.5,
+                duration: 0.45,
                 ease: "circInOut",
                 onComplete: () => {
                     animate(
                         first_layer.current,
                         { y: "-100%" },
                         {
-                            duration: 0.5,
+                            duration: 0.4,
                             ease: "circInOut",
                             onComplete: next,
                         }
